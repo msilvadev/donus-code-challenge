@@ -1,9 +1,10 @@
 package br.com.donuscodechallenge.usecases;
 
+import br.com.donuscodechallenge.entities.Account;
+import br.com.donuscodechallenge.model.Deposit;
+
 public interface BankOperations {
-    public Long doDeposit();
+    public String doDeposit(Deposit deposit);
     public Long doDraft();
     public Long doTransfer();
-    public Double bonusToDeposit();
-    public Double discountInDraft();
 }

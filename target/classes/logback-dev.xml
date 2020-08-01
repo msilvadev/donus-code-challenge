@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+
+    <property name="log.home" value="${LOG_DIR:-logs}" />
+
+    <!-- FILE NAME -->
+    <property name="filenameApp" value="donus-code-challenge" />
+
+    <!-- Properties -->
+    <property name="log.pattern" value="%date{HH:mm:ss.SSS} %5level [%thread] %logger{36}:%L - %msg%n" />
+    <property name="log.color.pattern" value="%date{HH:mm:ss.SSS} %highlight(%5level) [%thread] %cyan(%logger{36}:%L) - %msg%n" />
+    <property name="dump.pattern" value="%date - %msg%n" />
+    <property name="log.charset" value="UTF-8" />
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>${log.charset}</charset>
+            <pattern>${log.color.pattern}</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="APP-FILE-ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.home}/${fileNameApp}.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${log.home}/${filenameApp}.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <!-- each archieved file, size max is 10MB -->
+            <maxFileSize>10MB</maxFileSize>
+            <!-- Total size of all archive files, if total size > 20GB, it will delete old archived file -->
+            <totalSizeCap>20GB</totalSizeCap>
+            <!-- 60 days to keep -->
+            <maxHistory>60</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <charset>${log.charset}</charset>
+            <pattern>${log.pattern}</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="br.com.donuscodechallenge" level="info" additivity="false">
+        <appender-ref ref="APP-FILE-ROLLING" />
+        <appender-ref ref="STDOUT" />
+    </logger>
+
+    <root level="warn">
+        <appender-ref ref="APP-FILE-ROLLING" />
+        <appender-ref ref="STDOUT" />
+    </root>
+
+</configuration>

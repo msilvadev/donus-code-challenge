@@ -1,10 +1,9 @@
 package br.com.donuscodechallenge.entities;
 
-import com.sun.istack.NotNull;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Objects;
@@ -53,6 +52,11 @@ public class Account implements Serializable {
         this.accountBalance = accountBalance;
     }
 
+    public synchronized void doDeposit(BigDecimal valueToDeposit) {
+        BigDecimal newBalance = accountBalance.add(valueToDeposit.multiply(UtilsToEntities.BONUS_PERCENTE).divide(UtilsToEntities.ONE_HUNDRED));
+        this.setAccountBalance(newBalance.add(this.accountBalance));
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -71,7 +75,7 @@ public class Account implements Serializable {
     @Override
     public String toString() {
         return "Account{" +
-                "cpf='" + cpf + '\'' +
+                "cpf='" + cpf.substring(0, 3) + ".***.***-**" + '\'' +
                 ", clientName='" + clientName + '\'' +
                 ", accountBalance=" + accountBalance +
                 '}';

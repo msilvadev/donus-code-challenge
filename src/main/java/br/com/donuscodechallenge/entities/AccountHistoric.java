@@ -3,6 +3,7 @@ package br.com.donuscodechallenge.entities;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -20,6 +21,11 @@ public class AccountHistoric implements Serializable {
     @NotNull
     private LocalDate transactionDate;
 
+    @NotNull
+    private BigDecimal previousAccountBalance;
+
+    private String observation;
+
     //uma categoria pode estar em varios lancamentos
     @NotNull
     @ManyToOne
@@ -29,10 +35,12 @@ public class AccountHistoric implements Serializable {
     public AccountHistoric() {
     }
 
-    public AccountHistoric(Long id, TransactionType transactionType, @NotNull LocalDate transactionDate, @NotNull Account account) {
+    public AccountHistoric(Long id, TransactionType transactionType, @NotNull LocalDate transactionDate, @NotNull BigDecimal previousAccountBalance, String observation, @NotNull Account account) {
         this.id = id;
         this.transactionType = transactionType;
         this.transactionDate = transactionDate;
+        this.previousAccountBalance = previousAccountBalance;
+        this.observation = observation;
         this.account = account;
     }
 
@@ -60,6 +68,22 @@ public class AccountHistoric implements Serializable {
         this.transactionDate = transactionDate;
     }
 
+    public BigDecimal getPreviousAccountBalance() {
+        return previousAccountBalance;
+    }
+
+    public void setPreviousAccountBalance(BigDecimal previousAccountBalance) {
+        this.previousAccountBalance = previousAccountBalance;
+    }
+
+    public String getObservation() {
+        return observation;
+    }
+
+    public void setObservation(String observation) {
+        this.observation = observation;
+    }
+
     public Account getAccount() {
         return account;
     }
@@ -73,15 +97,17 @@ public class AccountHistoric implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         AccountHistoric that = (AccountHistoric) o;
-        return Objects.equals(id, that.id) &&
+        return id.equals(that.id) &&
                 transactionType == that.transactionType &&
-                Objects.equals(transactionDate, that.transactionDate) &&
-                Objects.equals(account, that.account);
+                transactionDate.equals(that.transactionDate) &&
+                previousAccountBalance.equals(that.previousAccountBalance) &&
+                observation.equals(that.observation) &&
+                account.equals(that.account);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, transactionType, transactionDate, account);
+        return Objects.hash(id, transactionType, transactionDate, previousAccountBalance, observation, account);
     }
 
     @Override
@@ -90,6 +116,8 @@ public class AccountHistoric implements Serializable {
                 "id=" + id +
                 ", transactionType=" + transactionType +
                 ", transactionDate=" + transactionDate +
+                ", previousAccountBalance=" + previousAccountBalance +
+                ", observation='" + observation + '\'' +
                 ", account=" + account +
                 '}';
     }
