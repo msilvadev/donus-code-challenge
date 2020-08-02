@@ -2,7 +2,7 @@
 
 Para facilitar a execução foi utilizado o banco de dados em memória H2. Ao executar
 a aplicação é possível acessar o partal admin pela url:
-    `http://localhost:8090/h2-console`
+    `http://localhost:8090/h2-console` `user: sa | password: sa`
 
 Foi feito o commit da collection do postman caso queiram utilizar para fazer requisições
 está na pasta `Collection Postman`.
