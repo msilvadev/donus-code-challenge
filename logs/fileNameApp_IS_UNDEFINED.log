@@ -1,123 +1,136 @@
-00:29:05.682  INFO [main] b.c.d.DonusChallengeApplication:55 - Starting DonusChallengeApplication on msilvadev with PID 18224 (/home/msilvadev/Documents/workspace/donus-code-challenge/target/classes started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
-00:29:05.697  INFO [main] b.c.d.DonusChallengeApplication:655 - The following profiles are active: dev
-00:29:08.691  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-00:29:10.867  INFO [main] b.c.d.DonusChallengeApplication:61 - Started DonusChallengeApplication in 6.234 seconds (JVM running for 6.905)
-00:29:10.900  INFO [main] b.c.d.DonusChallengeApplication:21 - DonusChallenge has completed startup
-00:30:59.592  INFO [main] b.c.d.DonusChallengeApplication:55 - Starting DonusChallengeApplication on msilvadev with PID 18347 (/home/msilvadev/Documents/workspace/donus-code-challenge/target/classes started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
-00:30:59.594  INFO [main] b.c.d.DonusChallengeApplication:655 - The following profiles are active: dev
-00:31:02.575  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-00:31:04.695  INFO [main] b.c.d.DonusChallengeApplication:61 - Started DonusChallengeApplication in 6.506 seconds (JVM running for 7.063)
-00:31:04.729  INFO [main] b.c.d.DonusChallengeApplication:21 - DonusChallenge has completed startup
-00:31:41.056  INFO [http-nio-8090-exec-1] b.c.d.controllers.AccountController:36 - Called AccountController method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
-00:31:41.058  INFO [http-nio-8090-exec-1] b.c.d.usecases.AccountUseCase:54 - Called AccountUseCase method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
-00:31:46.518  INFO [http-nio-8090-exec-3] b.c.d.controllers.AccountController:52 - Called AccountController method getAllAccounts()
-00:31:46.520  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:72 - Called AccountUseCase method getAccount({})
-00:31:53.854  INFO [http-nio-8090-exec-5] b.c.d.controllers.AccountController:52 - Called AccountController method getAllAccounts()
-00:31:53.854  INFO [http-nio-8090-exec-5] b.c.d.usecases.AccountUseCase:72 - Called AccountUseCase method getAccount({})
-00:33:20.221  INFO [main] b.c.d.DonusChallengeApplication:55 - Starting DonusChallengeApplication on msilvadev with PID 18487 (/home/msilvadev/Documents/workspace/donus-code-challenge/target/classes started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
-00:33:20.223  INFO [main] b.c.d.DonusChallengeApplication:655 - The following profiles are active: dev
-00:33:23.398  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-00:33:26.077  INFO [main] b.c.d.DonusChallengeApplication:61 - Started DonusChallengeApplication in 6.961 seconds (JVM running for 7.721)
-00:33:26.125  INFO [main] b.c.d.DonusChallengeApplication:21 - DonusChallenge has completed startup
-00:33:32.152  INFO [http-nio-8090-exec-2] b.c.d.controllers.AccountController:34 - Called AccountController method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
-00:33:32.155  INFO [http-nio-8090-exec-2] b.c.d.usecases.AccountUseCase:54 - Called AccountUseCase method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
-00:33:35.513  INFO [http-nio-8090-exec-3] b.c.d.controllers.AccountController:50 - Called AccountController method getAllAccounts()
-00:33:35.514  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:72 - Called AccountUseCase method getAccount({})
-00:33:56.886  INFO [main] b.c.d.DonusChallengeApplication:55 - Starting DonusChallengeApplication on msilvadev with PID 18582 (/home/msilvadev/Documents/workspace/donus-code-challenge/target/classes started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
-00:33:56.888  INFO [main] b.c.d.DonusChallengeApplication:655 - The following profiles are active: dev
-00:34:00.027  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-00:34:02.312  INFO [main] b.c.d.DonusChallengeApplication:61 - Started DonusChallengeApplication in 6.694 seconds (JVM running for 7.46)
-00:34:02.354  INFO [main] b.c.d.DonusChallengeApplication:21 - DonusChallenge has completed startup
-00:34:10.794  INFO [http-nio-8090-exec-2] b.c.d.controllers.AccountController:34 - Called AccountController method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
-00:34:10.797  INFO [http-nio-8090-exec-2] b.c.d.usecases.AccountUseCase:54 - Called AccountUseCase method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
-00:34:15.585  INFO [http-nio-8090-exec-4] b.c.d.controllers.AccountController:50 - Called AccountController method getAllAccounts()
-00:34:15.585  INFO [http-nio-8090-exec-4] b.c.d.usecases.AccountUseCase:72 - Called AccountUseCase method getAccount({})
-00:34:30.665  WARN [http-nio-8090-exec-5] o.s.web.servlet.PageNotFound:209 - Request method 'PUT' not supported
-00:34:57.185  INFO [http-nio-8090-exec-3] b.c.d.controllers.AccountController:56 - Called AccountController method doDeposit(Deposit{cpf='4146057525', depositValue=100})
-00:34:57.185  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:27 - Called AccountUseCase method createAccount(Deposit{cpf='4146057525', depositValue=100})
-00:34:57.185  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:67 - Called AccountUseCase method getAccount(414.***.***-**)
-00:35:11.562  INFO [http-nio-8090-exec-8] b.c.d.controllers.AccountController:50 - Called AccountController method getAllAccounts()
-00:35:11.563  INFO [http-nio-8090-exec-8] b.c.d.usecases.AccountUseCase:72 - Called AccountUseCase method getAccount({})
-00:35:14.202  INFO [http-nio-8090-exec-10] b.c.d.controllers.AccountController:50 - Called AccountController method getAllAccounts()
-00:35:14.203  INFO [http-nio-8090-exec-10] b.c.d.usecases.AccountUseCase:72 - Called AccountUseCase method getAccount({})
-00:35:54.590  INFO [http-nio-8090-exec-9] b.c.d.controllers.AccountController:56 - Called AccountController method doDeposit(Deposit{cpf='4146057525', depositValue=100})
-00:35:54.591  INFO [http-nio-8090-exec-9] b.c.d.usecases.AccountUseCase:27 - Called AccountUseCase method createAccount(Deposit{cpf='4146057525', depositValue=100})
-00:35:54.591  INFO [http-nio-8090-exec-9] b.c.d.usecases.AccountUseCase:67 - Called AccountUseCase method getAccount(414.***.***-**)
-00:37:19.364  WARN [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m7s176ms746µs532ns).
-00:37:47.948  INFO [main] b.c.d.DonusChallengeApplication:55 - Starting DonusChallengeApplication on msilvadev with PID 18790 (/home/msilvadev/Documents/workspace/donus-code-challenge/target/classes started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
-00:37:47.953  INFO [main] b.c.d.DonusChallengeApplication:655 - The following profiles are active: dev
-00:37:50.760  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-00:37:53.176  INFO [main] b.c.d.DonusChallengeApplication:61 - Started DonusChallengeApplication in 6.421 seconds (JVM running for 7.309)
-00:37:53.221  INFO [main] b.c.d.DonusChallengeApplication:21 - DonusChallenge has completed startup
-00:38:05.183  INFO [http-nio-8090-exec-2] b.c.d.controllers.AccountController:34 - Called AccountController method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
-00:38:05.187  INFO [http-nio-8090-exec-2] b.c.d.usecases.AccountUseCase:54 - Called AccountUseCase method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
-00:38:07.925  INFO [http-nio-8090-exec-3] b.c.d.controllers.AccountController:56 - Called AccountController method doDeposit(Deposit{cpf='4146057525', depositValue=100})
-00:38:07.925  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:27 - Called AccountUseCase method createAccount(Deposit{cpf='4146057525', depositValue=100})
-00:38:07.926  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:67 - Called AccountUseCase method getAccount(414.***.***-**)
-00:38:38.788  WARN [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48s308ms867µs954ns).
-00:38:51.249  INFO [http-nio-8090-exec-4] b.c.d.controllers.AccountController:50 - Called AccountController method getAllAccounts()
-00:38:51.250  INFO [http-nio-8090-exec-4] b.c.d.usecases.AccountUseCase:72 - Called AccountUseCase method getAccount({})
-00:39:15.765  INFO [main] b.c.d.DonusChallengeApplication:55 - Starting DonusChallengeApplication on msilvadev with PID 18908 (/home/msilvadev/Documents/workspace/donus-code-challenge/target/classes started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
-00:39:15.767  INFO [main] b.c.d.DonusChallengeApplication:655 - The following profiles are active: dev
-00:39:18.354  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-00:39:20.198  INFO [main] b.c.d.DonusChallengeApplication:61 - Started DonusChallengeApplication in 5.41 seconds (JVM running for 5.948)
-00:39:20.232  INFO [main] b.c.d.DonusChallengeApplication:21 - DonusChallenge has completed startup
-00:39:28.833  INFO [http-nio-8090-exec-2] b.c.d.controllers.AccountController:34 - Called AccountController method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
-00:39:28.836  INFO [http-nio-8090-exec-2] b.c.d.usecases.AccountUseCase:54 - Called AccountUseCase method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
-00:39:31.084  INFO [http-nio-8090-exec-3] b.c.d.controllers.AccountController:56 - Called AccountController method doDeposit(Deposit{cpf='4146057525', depositValue=100})
-00:39:31.085  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:27 - Called AccountUseCase method createAccount(Deposit{cpf='4146057525', depositValue=100})
-00:39:31.085  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:67 - Called AccountUseCase method getAccount(414.***.***-**)
-00:39:35.549  INFO [http-nio-8090-exec-4] b.c.d.controllers.AccountController:50 - Called AccountController method getAllAccounts()
-00:39:35.549  INFO [http-nio-8090-exec-4] b.c.d.usecases.AccountUseCase:72 - Called AccountUseCase method getAccount({})
-00:39:45.841  INFO [http-nio-8090-exec-5] b.c.d.controllers.AccountController:56 - Called AccountController method doDeposit(Deposit{cpf='4147525', depositValue=100})
-00:39:45.841  INFO [http-nio-8090-exec-5] b.c.d.usecases.AccountUseCase:27 - Called AccountUseCase method createAccount(Deposit{cpf='4147525', depositValue=100})
-00:39:45.841  INFO [http-nio-8090-exec-5] b.c.d.usecases.AccountUseCase:67 - Called AccountUseCase method getAccount(414.***.***-**)
-00:39:45.843 ERROR [http-nio-8090-exec-5] b.c.d.usecases.AccountUseCase:36 - AccountNotExistException: 
-00:41:55.501  INFO [main] b.c.d.DonusChallengeApplication:55 - Starting DonusChallengeApplication on msilvadev with PID 19076 (/home/msilvadev/Documents/workspace/donus-code-challenge/target/classes started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
-00:41:55.503  INFO [main] b.c.d.DonusChallengeApplication:655 - The following profiles are active: dev
-00:41:58.322  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-00:42:00.137  INFO [main] b.c.d.DonusChallengeApplication:61 - Started DonusChallengeApplication in 5.479 seconds (JVM running for 6.134)
-00:42:00.171  INFO [main] b.c.d.DonusChallengeApplication:21 - DonusChallenge has completed startup
-00:42:12.456  INFO [http-nio-8090-exec-2] b.c.d.controllers.AccountController:56 - Called AccountController method doDeposit(Deposit{cpf='null', depositValue=100})
-00:42:12.458  INFO [http-nio-8090-exec-2] b.c.d.usecases.AccountUseCase:27 - Called AccountUseCase method createAccount(Deposit{cpf='null', depositValue=100})
-00:42:12.459  INFO [http-nio-8090-exec-2] b.c.d.usecases.AccountUseCase:67 - Called AccountUseCase method getAccount()
-00:42:12.492 ERROR [http-nio-8090-exec-2] o.a.c.c.C.[.[.[.[dispatcherServlet]:175 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: The given id must not be null!; nested exception is java.lang.IllegalArgumentException: The given id must not be null!] with root cause
-java.lang.IllegalArgumentException: The given id must not be null!
-	at org.springframework.util.Assert.notNull(Assert.java:201)
-	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById(SimpleJpaRepository.java:269)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.data.repository.core.support.ImplementationInvocationMetadata.invoke(ImplementationInvocationMetadata.java:72)
-	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:382)
-	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:205)
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:549)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:155)
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:130)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:367)
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:178)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
-	at com.sun.proxy.$Proxy122.findById(Unknown Source)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:205)
-	at com.sun.proxy.$Proxy88.findById(Unknown Source)
-	at br.com.donuscodechallenge.usecases.AccountUseCase.getAccount(AccountUseCase.java:68)
-	at br.com.donuscodechallenge.usecases.AccountUseCase.doDeposit(AccountUseCase.java:29)
-	at br.com.donuscodechallenge.controllers.AccountController.doDeposit(AccountController.java:57)
+10:04:16.200  INFO [main] b.c.d.DonusChallengeApplication:55 - Starting DonusChallengeApplication on msilvadev with PID 4119 (/home/msilvadev/Documents/workspace/donus-code-challenge/target/classes started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
+10:04:16.258  INFO [main] b.c.d.DonusChallengeApplication:655 - The following profiles are active: dev
+10:04:22.642  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10:04:27.938  INFO [main] b.c.d.DonusChallengeApplication:61 - Started DonusChallengeApplication in 13.037 seconds (JVM running for 15.452)
+10:04:28.077  INFO [main] b.c.d.DonusChallengeApplication:21 - DonusChallenge has completed startup
+10:06:14.937  INFO [main] b.c.d.DonusChallengeApplication:55 - Starting DonusChallengeApplication on msilvadev with PID 4447 (/home/msilvadev/Documents/workspace/donus-code-challenge/target/classes started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
+10:06:14.954  INFO [main] b.c.d.DonusChallengeApplication:655 - The following profiles are active: dev
+10:06:17.930  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10:06:19.980  INFO [main] b.c.d.DonusChallengeApplication:61 - Started DonusChallengeApplication in 6.125 seconds (JVM running for 6.86)
+10:06:20.022  INFO [main] b.c.d.DonusChallengeApplication:21 - DonusChallenge has completed startup
+10:06:33.475  INFO [http-nio-8090-exec-1] b.c.d.controllers.AccountController:34 - Called AccountController method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+10:06:33.477  INFO [http-nio-8090-exec-1] b.c.d.usecases.AccountUseCase:53 - Called AccountUseCase method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+10:06:42.626  INFO [http-nio-8090-exec-3] b.c.d.controllers.AccountController:56 - Called AccountController method doDeposit(Deposit{cpf='4146057525', depositValue=100})
+10:06:42.628  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:26 - Called AccountUseCase method createAccount(Deposit{cpf='4146057525', depositValue=100})
+10:06:42.630  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:66 - Called AccountUseCase method getAccount(414.***.***-**)
+10:07:54.942  INFO [main] b.c.d.DonusChallengeApplication:55 - Starting DonusChallengeApplication on msilvadev with PID 4552 (/home/msilvadev/Documents/workspace/donus-code-challenge/target/classes started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
+10:07:54.944  INFO [main] b.c.d.DonusChallengeApplication:655 - The following profiles are active: dev
+10:07:57.677  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10:07:59.641  INFO [main] b.c.d.DonusChallengeApplication:61 - Started DonusChallengeApplication in 5.559 seconds (JVM running for 6.142)
+10:07:59.681  INFO [main] b.c.d.DonusChallengeApplication:21 - DonusChallenge has completed startup
+10:08:11.923  INFO [http-nio-8090-exec-2] b.c.d.controllers.AccountController:56 - Called AccountController method doDeposit(Deposit{cpf='4146057525', depositValue=100})
+10:08:11.925  INFO [http-nio-8090-exec-2] b.c.d.usecases.AccountUseCase:26 - Called AccountUseCase method createAccount(Deposit{cpf='4146057525', depositValue=100})
+10:08:11.925  INFO [http-nio-8090-exec-2] b.c.d.usecases.AccountUseCase:66 - Called AccountUseCase method getAccount(414.***.***-**)
+10:08:11.957 ERROR [http-nio-8090-exec-2] b.c.d.usecases.AccountUseCase:35 - AccountNotExistException: 
+10:08:48.289  INFO [http-nio-8090-exec-5] b.c.d.controllers.AccountController:34 - Called AccountController method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+10:08:48.289  INFO [http-nio-8090-exec-5] b.c.d.usecases.AccountUseCase:53 - Called AccountUseCase method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+10:09:07.716  INFO [http-nio-8090-exec-6] b.c.d.controllers.AccountController:56 - Called AccountController method doDeposit(Deposit{cpf='4146057525', depositValue=100})
+10:09:07.716  INFO [http-nio-8090-exec-6] b.c.d.usecases.AccountUseCase:26 - Called AccountUseCase method createAccount(Deposit{cpf='4146057525', depositValue=100})
+10:09:07.716  INFO [http-nio-8090-exec-6] b.c.d.usecases.AccountUseCase:66 - Called AccountUseCase method getAccount(414.***.***-**)
+10:24:20.884  INFO [main] b.c.d.DonusChallengeApplication:55 - Starting DonusChallengeApplication on msilvadev with PID 5797 (/home/msilvadev/Documents/workspace/donus-code-challenge/target/classes started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
+10:24:20.886  INFO [main] b.c.d.DonusChallengeApplication:655 - The following profiles are active: dev
+10:24:23.624  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10:24:25.504  INFO [main] b.c.d.DonusChallengeApplication:61 - Started DonusChallengeApplication in 5.557 seconds (JVM running for 6.193)
+10:24:25.542  INFO [main] b.c.d.DonusChallengeApplication:21 - DonusChallenge has completed startup
+10:24:32.853  INFO [http-nio-8090-exec-2] b.c.d.controllers.AccountController:34 - Called AccountController method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+10:24:32.856  INFO [http-nio-8090-exec-2] b.c.d.usecases.AccountUseCase:27 - Called AccountUseCase method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+10:25:58.425  INFO [http-nio-8090-exec-5] b.c.d.controllers.AccountController:34 - Called AccountController method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+10:25:58.425  INFO [http-nio-8090-exec-5] b.c.d.usecases.AccountUseCase:27 - Called AccountUseCase method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+10:25:58.434 ERROR [http-nio-8090-exec-5] b.c.d.usecases.AccountUseCase:32 - AccountAlreadyExistException because this account(4146057525) already exist
+10:26:11.682  INFO [http-nio-8090-exec-7] b.c.d.controllers.AccountController:64 - Called AccountController method draft(Deposit{cpf='4146057525', depositValue=200, transactionType=DRAFT})
+10:26:11.683  INFO [http-nio-8090-exec-7] b.c.d.usecases.AccountUseCase:69 - Called AccountUseCase method doDraft(Deposit{cpf='4146057525', depositValue=200, transactionType=DRAFT})
+10:26:11.683  INFO [http-nio-8090-exec-7] b.c.d.usecases.AccountUseCase:40 - Called AccountUseCase method getAccount(414.***.***-**)
+10:27:41.629  INFO [main] b.c.d.DonusChallengeApplication:55 - Starting DonusChallengeApplication on msilvadev with PID 5950 (/home/msilvadev/Documents/workspace/donus-code-challenge/target/classes started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
+10:27:41.631  INFO [main] b.c.d.DonusChallengeApplication:655 - The following profiles are active: dev
+10:27:44.459  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10:27:46.359  INFO [main] b.c.d.DonusChallengeApplication:61 - Started DonusChallengeApplication in 5.735 seconds (JVM running for 6.408)
+10:27:46.401  INFO [main] b.c.d.DonusChallengeApplication:21 - DonusChallenge has completed startup
+10:27:58.451  INFO [main] b.c.d.DonusChallengeApplication:55 - Starting DonusChallengeApplication on msilvadev with PID 6023 (/home/msilvadev/Documents/workspace/donus-code-challenge/target/classes started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
+10:27:58.453  INFO [main] b.c.d.DonusChallengeApplication:655 - The following profiles are active: dev
+10:28:01.886  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10:28:04.648  INFO [main] b.c.d.DonusChallengeApplication:61 - Started DonusChallengeApplication in 7.646 seconds (JVM running for 8.601)
+10:28:04.698  INFO [main] b.c.d.DonusChallengeApplication:21 - DonusChallenge has completed startup
+10:28:09.917  INFO [http-nio-8090-exec-1] b.c.d.controllers.AccountController:34 - Called AccountController method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+10:28:09.920  INFO [http-nio-8090-exec-1] b.c.d.usecases.AccountUseCase:27 - Called AccountUseCase method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+10:28:32.277  INFO [http-nio-8090-exec-3] b.c.d.controllers.AccountController:64 - Called AccountController method draft(Deposit{cpf='4146057525', depositransactionValuetValue=200, transactionType=DRAFT})
+10:28:32.278  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:69 - Called AccountUseCase method doDraft(Deposit{cpf='4146057525', depositransactionValuetValue=200, transactionType=DRAFT})
+10:28:32.279  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:40 - Called AccountUseCase method getAccount(414.***.***-**)
+10:30:47.076  INFO [main] b.c.d.DonusChallengeApplication:55 - Starting DonusChallengeApplication on msilvadev with PID 6201 (/home/msilvadev/Documents/workspace/donus-code-challenge/target/classes started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
+10:30:47.078  INFO [main] b.c.d.DonusChallengeApplication:655 - The following profiles are active: dev
+10:30:49.871  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10:30:51.897  INFO [main] b.c.d.DonusChallengeApplication:61 - Started DonusChallengeApplication in 5.962 seconds (JVM running for 6.655)
+10:30:51.937  INFO [main] b.c.d.DonusChallengeApplication:21 - DonusChallenge has completed startup
+10:31:21.015  INFO [http-nio-8090-exec-2] b.c.d.controllers.AccountController:34 - Called AccountController method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+10:31:21.017  INFO [http-nio-8090-exec-2] b.c.d.usecases.AccountUseCase:27 - Called AccountUseCase method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+10:31:23.554  INFO [http-nio-8090-exec-3] b.c.d.controllers.AccountController:64 - Called AccountController method draft(Deposit{cpf='4146057525', depositransactionValuetValue=200, transactionType=DRAFT})
+10:31:23.555  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:69 - Called AccountUseCase method doDraft(Deposit{cpf='4146057525', depositransactionValuetValue=200, transactionType=DRAFT})
+10:31:23.555  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:40 - Called AccountUseCase method getAccount(414.***.***-**)
+10:32:22.334  INFO [main] b.c.d.DonusChallengeApplication:55 - Starting DonusChallengeApplication on msilvadev with PID 6314 (/home/msilvadev/Documents/workspace/donus-code-challenge/target/classes started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
+10:32:22.336  INFO [main] b.c.d.DonusChallengeApplication:655 - The following profiles are active: dev
+10:32:24.979  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10:32:26.989  INFO [main] b.c.d.DonusChallengeApplication:61 - Started DonusChallengeApplication in 5.682 seconds (JVM running for 6.25)
+10:32:27.023  INFO [main] b.c.d.DonusChallengeApplication:21 - DonusChallenge has completed startup
+10:32:32.182  INFO [http-nio-8090-exec-1] b.c.d.controllers.AccountController:34 - Called AccountController method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+10:32:32.184  INFO [http-nio-8090-exec-1] b.c.d.usecases.AccountUseCase:27 - Called AccountUseCase method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+10:32:35.340  INFO [http-nio-8090-exec-3] b.c.d.controllers.AccountController:64 - Called AccountController method draft(Deposit{cpf='4146057525', depositransactionValuetValue=200, transactionType=DRAFT})
+10:32:35.341  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:69 - Called AccountUseCase method doDraft(Deposit{cpf='4146057525', depositransactionValuetValue=200, transactionType=DRAFT})
+10:32:35.342  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:40 - Called AccountUseCase method getAccount(414.***.***-**)
+10:33:02.576  INFO [main] b.c.d.DonusChallengeApplication:55 - Starting DonusChallengeApplication on msilvadev with PID 6563 (/home/msilvadev/Documents/workspace/donus-code-challenge/target/classes started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
+10:33:02.578  INFO [main] b.c.d.DonusChallengeApplication:655 - The following profiles are active: dev
+10:33:05.134  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10:33:07.388  INFO [main] b.c.d.DonusChallengeApplication:61 - Started DonusChallengeApplication in 5.796 seconds (JVM running for 6.545)
+10:33:07.426  INFO [main] b.c.d.DonusChallengeApplication:21 - DonusChallenge has completed startup
+10:33:35.454  INFO [http-nio-8090-exec-2] b.c.d.controllers.AccountController:34 - Called AccountController method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+10:33:35.457  INFO [http-nio-8090-exec-2] b.c.d.usecases.AccountUseCase:27 - Called AccountUseCase method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+10:33:37.911  INFO [http-nio-8090-exec-3] b.c.d.controllers.AccountController:64 - Called AccountController method draft(Deposit{cpf='4146057525', depositransactionValuetValue=200, transactionType=DRAFT})
+10:33:37.916  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:69 - Called AccountUseCase method doDraft(Deposit{cpf='4146057525', depositransactionValuetValue=200, transactionType=DRAFT})
+10:33:37.916  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:40 - Called AccountUseCase method getAccount(414.***.***-**)
+10:34:28.915  WARN [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53s979ms642µs782ns).
+10:35:36.168  INFO [main] b.c.d.DonusChallengeApplication:55 - Starting DonusChallengeApplication on msilvadev with PID 6717 (/home/msilvadev/Documents/workspace/donus-code-challenge/target/classes started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
+10:35:36.170  INFO [main] b.c.d.DonusChallengeApplication:655 - The following profiles are active: dev
+10:35:38.491  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10:35:40.696  INFO [main] b.c.d.DonusChallengeApplication:61 - Started DonusChallengeApplication in 5.496 seconds (JVM running for 6.184)
+10:35:40.730  INFO [main] b.c.d.DonusChallengeApplication:21 - DonusChallenge has completed startup
+10:35:50.699  INFO [http-nio-8090-exec-2] b.c.d.controllers.AccountController:34 - Called AccountController method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+10:35:50.701  INFO [http-nio-8090-exec-2] b.c.d.usecases.AccountUseCase:27 - Called AccountUseCase method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+10:35:53.327  INFO [http-nio-8090-exec-3] b.c.d.controllers.AccountController:64 - Called AccountController method draft(Deposit{cpf='4146057525', depositransactionValuetValue=200, transactionType=DRAFT})
+10:35:53.328  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:69 - Called AccountUseCase method doDraft(Deposit{cpf='4146057525', depositransactionValuetValue=200, transactionType=DRAFT})
+10:35:53.329  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:40 - Called AccountUseCase method getAccount(414.***.***-**)
+10:36:14.433  WARN [SpringContextShutdownHook] o.h.e.jdbc.spi.SqlExceptionHelper:137 - SQL Error: 90121, SQLState: 90121
+10:36:14.433 ERROR [SpringContextShutdownHook] o.h.e.jdbc.spi.SqlExceptionHelper:142 - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+10:36:14.434  WARN [SpringContextShutdownHook] o.h.e.jdbc.spi.SqlExceptionHelper:137 - SQL Error: 90121, SQLState: 90121
+10:36:14.435 ERROR [SpringContextShutdownHook] o.h.e.jdbc.spi.SqlExceptionHelper:142 - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+10:36:14.435  WARN [SpringContextShutdownHook] o.s.b.f.s.DisposableBeanAdapter:267 - Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
+10:36:24.484  INFO [main] b.c.d.DonusChallengeApplication:55 - Starting DonusChallengeApplication on msilvadev with PID 6825 (/home/msilvadev/Documents/workspace/donus-code-challenge/target/classes started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
+10:36:24.486  INFO [main] b.c.d.DonusChallengeApplication:655 - The following profiles are active: dev
+10:36:27.111  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10:36:29.479  INFO [main] b.c.d.DonusChallengeApplication:61 - Started DonusChallengeApplication in 5.836 seconds (JVM running for 6.509)
+10:36:29.511  INFO [main] b.c.d.DonusChallengeApplication:21 - DonusChallenge has completed startup
+10:36:38.818  INFO [http-nio-8090-exec-2] b.c.d.controllers.AccountController:34 - Called AccountController method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+10:36:38.820  INFO [http-nio-8090-exec-2] b.c.d.usecases.AccountUseCase:27 - Called AccountUseCase method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+10:36:41.049  INFO [http-nio-8090-exec-3] b.c.d.controllers.AccountController:64 - Called AccountController method draft(Deposit{cpf='4146057525', depositransactionValuetValue=200, transactionType=DRAFT})
+10:36:41.049  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:69 - Called AccountUseCase method doDraft(Deposit{cpf='4146057525', depositransactionValuetValue=200, transactionType=DRAFT})
+10:36:41.049  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:40 - Called AccountUseCase method getAccount(414.***.***-**)
+10:37:24.764  WARN [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=57s861ms892µs979ns).
+10:37:30.866  WARN [SpringContextShutdownHook] o.h.e.jdbc.spi.SqlExceptionHelper:137 - SQL Error: 90121, SQLState: 90121
+10:37:30.867 ERROR [SpringContextShutdownHook] o.h.e.jdbc.spi.SqlExceptionHelper:142 - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+10:37:30.868  WARN [SpringContextShutdownHook] o.h.e.jdbc.spi.SqlExceptionHelper:137 - SQL Error: 90121, SQLState: 90121
+10:37:30.869 ERROR [SpringContextShutdownHook] o.h.e.jdbc.spi.SqlExceptionHelper:142 - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+10:37:30.870  WARN [SpringContextShutdownHook] o.s.b.f.s.DisposableBeanAdapter:267 - Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
+10:38:16.475  INFO [main] b.c.d.DonusChallengeApplication:55 - Starting DonusChallengeApplication on msilvadev with PID 7105 (/home/msilvadev/Documents/workspace/donus-code-challenge/target/classes started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
+10:38:16.478  INFO [main] b.c.d.DonusChallengeApplication:655 - The following profiles are active: dev
+10:38:18.997  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10:38:20.607  INFO [main] b.c.d.DonusChallengeApplication:61 - Started DonusChallengeApplication in 4.866 seconds (JVM running for 5.441)
+10:38:20.639  INFO [main] b.c.d.DonusChallengeApplication:21 - DonusChallenge has completed startup
+10:38:30.342  INFO [http-nio-8090-exec-2] b.c.d.controllers.AccountController:34 - Called AccountController method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+10:38:30.344  INFO [http-nio-8090-exec-2] b.c.d.usecases.AccountUseCase:27 - Called AccountUseCase method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+10:38:35.209  INFO [http-nio-8090-exec-3] b.c.d.controllers.AccountController:64 - Called AccountController method draft(Deposit{cpf='4146057525', depositransactionValuetValue=200, transactionType=DRAFT})
+10:38:35.210  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:69 - Called AccountUseCase method doDraft(Deposit{cpf='4146057525', depositransactionValuetValue=200, transactionType=DRAFT})
+10:38:35.210  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:40 - Called AccountUseCase method getAccount(414.***.***-**)
+10:38:35.219 ERROR [http-nio-8090-exec-3] o.a.c.c.C.[.[.[.[dispatcherServlet]:175 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is br.com.donuscodechallenge.usecases.exception.BalanceCouldNotBeNegative] with root cause
+br.com.donuscodechallenge.usecases.exception.BalanceCouldNotBeNegative: null
+	at br.com.donuscodechallenge.usecases.AccountUseCase.doDraft(AccountUseCase.java:77)
+	at br.com.donuscodechallenge.controllers.AccountController.draft(AccountController.java:65)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -172,39 +185,198 @@ java.lang.IllegalArgumentException: The given id must not be null!
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-00:46:07.196  INFO [main] b.c.d.DonusChallengeApplication:55 - Starting DonusChallengeApplication on msilvadev with PID 19329 (/home/msilvadev/Documents/workspace/donus-code-challenge/target/classes started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
-00:46:07.199  INFO [main] b.c.d.DonusChallengeApplication:655 - The following profiles are active: dev
-00:46:10.426  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-00:46:12.299  INFO [main] b.c.d.DonusChallengeApplication:61 - Started DonusChallengeApplication in 5.938 seconds (JVM running for 6.504)
-00:46:12.339  INFO [main] b.c.d.DonusChallengeApplication:21 - DonusChallenge has completed startup
-00:46:31.914  INFO [http-nio-8090-exec-2] b.c.d.controllers.AccountController:34 - Called AccountController method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
-00:46:31.921  INFO [http-nio-8090-exec-2] b.c.d.usecases.AccountUseCase:53 - Called AccountUseCase method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
-00:46:35.076  INFO [http-nio-8090-exec-3] b.c.d.controllers.AccountController:56 - Called AccountController method doDeposit(Deposit{cpf='4146057525', depositValue=100})
-00:46:35.078  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:26 - Called AccountUseCase method createAccount(Deposit{cpf='4146057525', depositValue=100})
-00:46:35.084  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:66 - Called AccountUseCase method getAccount(414.***.***-**)
-00:47:19.531  INFO [main] b.c.d.DonusChallengeApplication:55 - Starting DonusChallengeApplication on msilvadev with PID 19463 (/home/msilvadev/Documents/workspace/donus-code-challenge/target/classes started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
-00:47:19.603  INFO [main] b.c.d.DonusChallengeApplication:655 - The following profiles are active: dev
-00:47:22.365  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-00:47:24.506  INFO [main] b.c.d.DonusChallengeApplication:61 - Started DonusChallengeApplication in 5.876 seconds (JVM running for 6.409)
-00:47:24.544  INFO [main] b.c.d.DonusChallengeApplication:21 - DonusChallenge has completed startup
-00:47:27.502  INFO [http-nio-8090-exec-2] b.c.d.controllers.AccountController:34 - Called AccountController method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
-00:47:27.504  INFO [http-nio-8090-exec-2] b.c.d.usecases.AccountUseCase:53 - Called AccountUseCase method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
-00:47:38.702  INFO [http-nio-8090-exec-3] b.c.d.controllers.AccountController:56 - Called AccountController method doDeposit(Deposit{cpf='4146057525', depositValue=100})
-00:47:38.702  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:26 - Called AccountUseCase method createAccount(Deposit{cpf='4146057525', depositValue=100})
-00:47:38.703  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:66 - Called AccountUseCase method getAccount(414.***.***-**)
-00:47:40.402  INFO [http-nio-8090-exec-4] b.c.d.controllers.AccountController:56 - Called AccountController method doDeposit(Deposit{cpf='4146057525', depositValue=100})
-00:47:40.402  INFO [http-nio-8090-exec-4] b.c.d.usecases.AccountUseCase:26 - Called AccountUseCase method createAccount(Deposit{cpf='4146057525', depositValue=100})
-00:47:40.402  INFO [http-nio-8090-exec-4] b.c.d.usecases.AccountUseCase:66 - Called AccountUseCase method getAccount(414.***.***-**)
-00:47:41.798  INFO [http-nio-8090-exec-5] b.c.d.controllers.AccountController:56 - Called AccountController method doDeposit(Deposit{cpf='4146057525', depositValue=100})
-00:47:41.799  INFO [http-nio-8090-exec-5] b.c.d.usecases.AccountUseCase:26 - Called AccountUseCase method createAccount(Deposit{cpf='4146057525', depositValue=100})
-00:47:41.800  INFO [http-nio-8090-exec-5] b.c.d.usecases.AccountUseCase:66 - Called AccountUseCase method getAccount(414.***.***-**)
-00:47:46.072  INFO [http-nio-8090-exec-6] b.c.d.controllers.AccountController:50 - Called AccountController method getAllAccounts()
-00:47:46.073  INFO [http-nio-8090-exec-6] b.c.d.usecases.AccountUseCase:71 - Called AccountUseCase method getAccount({})
-00:49:15.822  INFO [main] b.c.d.DonusChallengeApplication:55 - Starting DonusChallengeApplication on msilvadev with PID 19593 (/home/msilvadev/Documents/workspace/donus-code-challenge/target/classes started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
-00:49:15.824  INFO [main] b.c.d.DonusChallengeApplication:655 - The following profiles are active: dev
-00:49:18.656  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-00:49:21.367  INFO [main] b.c.d.DonusChallengeApplication:61 - Started DonusChallengeApplication in 6.758 seconds (JVM running for 7.543)
-00:49:21.411  INFO [main] b.c.d.DonusChallengeApplication:21 - DonusChallenge has completed startup
-00:49:40.731  INFO [http-nio-8090-exec-2] b.c.d.controllers.AccountController:34 - Called AccountController method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
-00:49:40.733  INFO [http-nio-8090-exec-2] b.c.d.usecases.AccountUseCase:53 - Called AccountUseCase method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
-00:50:36.574  WARN [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m18s121ms42µs525ns).
+10:39:02.677  INFO [main] b.c.d.DonusChallengeApplication:55 - Starting DonusChallengeApplication on msilvadev with PID 7204 (/home/msilvadev/Documents/workspace/donus-code-challenge/target/classes started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
+10:39:02.684  INFO [main] b.c.d.DonusChallengeApplication:655 - The following profiles are active: dev
+10:39:05.108  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10:39:07.186  INFO [main] b.c.d.DonusChallengeApplication:61 - Started DonusChallengeApplication in 5.466 seconds (JVM running for 6.136)
+10:39:07.222  INFO [main] b.c.d.DonusChallengeApplication:21 - DonusChallenge has completed startup
+10:39:18.375  INFO [http-nio-8090-exec-1] b.c.d.controllers.AccountController:34 - Called AccountController method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+10:39:18.378  INFO [http-nio-8090-exec-1] b.c.d.usecases.AccountUseCase:27 - Called AccountUseCase method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+10:39:23.599  INFO [http-nio-8090-exec-3] b.c.d.controllers.AccountController:64 - Called AccountController method draft(Deposit{cpf='4146057525', depositransactionValuetValue=200, transactionType=DRAFT})
+10:39:23.600  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:69 - Called AccountUseCase method doDraft(Deposit{cpf='4146057525', depositransactionValuetValue=200, transactionType=DRAFT})
+10:39:23.601  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:40 - Called AccountUseCase method getAccount(414.***.***-**)
+10:39:51.489  WARN [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46s554ms453µs638ns).
+10:39:51.508 ERROR [http-nio-8090-exec-3] o.a.c.c.C.[.[.[.[dispatcherServlet]:175 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is br.com.donuscodechallenge.usecases.exception.BalanceCouldNotBeNegative] with root cause
+br.com.donuscodechallenge.usecases.exception.BalanceCouldNotBeNegative: null
+	at br.com.donuscodechallenge.usecases.AccountUseCase.doDraft(AccountUseCase.java:77)
+	at br.com.donuscodechallenge.controllers.AccountController.draft(AccountController.java:65)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+10:41:58.927  INFO [main] b.c.d.DonusChallengeApplication:55 - Starting DonusChallengeApplication on msilvadev with PID 7429 (/home/msilvadev/Documents/workspace/donus-code-challenge/target/classes started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
+10:41:58.929  INFO [main] b.c.d.DonusChallengeApplication:655 - The following profiles are active: dev
+10:42:01.596  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10:42:03.184  INFO [main] b.c.d.DonusChallengeApplication:61 - Started DonusChallengeApplication in 5.442 seconds (JVM running for 6.073)
+10:42:03.216  INFO [main] b.c.d.DonusChallengeApplication:21 - DonusChallenge has completed startup
+10:42:19.974  INFO [http-nio-8090-exec-1] b.c.d.controllers.AccountController:34 - Called AccountController method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+10:42:19.977  INFO [http-nio-8090-exec-1] b.c.d.usecases.AccountUseCase:27 - Called AccountUseCase method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+10:42:34.491  INFO [http-nio-8090-exec-2] b.c.d.controllers.AccountController:64 - Called AccountController method draft(Deposit{cpf='4146057525', depositransactionValuetValue=200, transactionType=DRAFT})
+10:42:34.492  INFO [http-nio-8090-exec-2] b.c.d.usecases.AccountUseCase:69 - Called AccountUseCase method doDraft(Deposit{cpf='4146057525', depositransactionValuetValue=200, transactionType=DRAFT})
+10:42:34.492  INFO [http-nio-8090-exec-2] b.c.d.usecases.AccountUseCase:40 - Called AccountUseCase method getAccount(414.***.***-**)
+10:46:22.285  INFO [main] b.c.d.DonusChallengeApplication:55 - Starting DonusChallengeApplication on msilvadev with PID 7971 (/home/msilvadev/Documents/workspace/donus-code-challenge/target/classes started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
+10:46:22.288  INFO [main] b.c.d.DonusChallengeApplication:655 - The following profiles are active: dev
+10:46:24.826  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10:46:26.770  INFO [main] b.c.d.DonusChallengeApplication:61 - Started DonusChallengeApplication in 5.522 seconds (JVM running for 6.288)
+10:46:26.804  INFO [main] b.c.d.DonusChallengeApplication:21 - DonusChallenge has completed startup
+10:46:33.136  INFO [http-nio-8090-exec-2] b.c.d.controllers.AccountController:34 - Called AccountController method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+10:46:33.138  INFO [http-nio-8090-exec-2] b.c.d.usecases.AccountUseCase:27 - Called AccountUseCase method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+10:46:38.746  INFO [http-nio-8090-exec-3] b.c.d.controllers.AccountController:64 - Called AccountController method draft(Deposit{cpf='4146057525', depositransactionValuetValue=200, transactionType=DRAFT})
+10:46:38.747  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:69 - Called AccountUseCase method doDraft(Deposit{cpf='4146057525', depositransactionValuetValue=200, transactionType=DRAFT})
+10:46:38.748  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:40 - Called AccountUseCase method getAccount(414.***.***-**)
+11:20:56.823  INFO [main] b.c.d.DonusChallengeApplication:55 - Starting DonusChallengeApplication on msilvadev with PID 9104 (/home/msilvadev/Documents/workspace/donus-code-challenge/target/classes started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
+11:20:56.826  INFO [main] b.c.d.DonusChallengeApplication:655 - The following profiles are active: dev
+11:20:59.119  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11:21:00.796  INFO [main] b.c.d.DonusChallengeApplication:61 - Started DonusChallengeApplication in 4.757 seconds (JVM running for 5.208)
+11:21:00.828  INFO [main] b.c.d.DonusChallengeApplication:21 - DonusChallenge has completed startup
+11:21:13.452  INFO [http-nio-8090-exec-1] b.c.d.controllers.AccountController:35 - Called AccountController method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=200.00})
+11:21:13.454  INFO [http-nio-8090-exec-1] b.c.d.usecases.AccountUseCase:32 - Called AccountUseCase method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=200.00})
+11:21:20.440  INFO [http-nio-8090-exec-3] b.c.d.controllers.AccountController:35 - Called AccountController method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=200.00})
+11:21:20.441  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:32 - Called AccountUseCase method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=200.00})
+11:22:57.442  INFO [http-nio-8090-exec-6] b.c.d.controllers.AccountController:44 - Called AccountController method getAccount(tra.***.***-**)
+11:22:57.443  INFO [http-nio-8090-exec-6] b.c.d.usecases.AccountUseCase:45 - Called AccountUseCase method getAccount(tra.***.***-**)
+11:23:42.346  INFO [http-nio-8090-exec-8] b.c.d.controllers.AccountController:44 - Called AccountController method getAccount(tra.***.***-**)
+11:23:42.347  INFO [http-nio-8090-exec-8] b.c.d.usecases.AccountUseCase:45 - Called AccountUseCase method getAccount(tra.***.***-**)
+11:25:32.520  INFO [http-nio-8090-exec-9] b.c.d.controllers.AccountController:72 - Called AccountController method transfer(Transfer{cpfToReceiveTransfer='4146057526'})
+11:25:32.520  INFO [http-nio-8090-exec-9] b.c.d.usecases.AccountUseCase:98 - Called AccountUseCase method doTransfer(Transfer{cpfToReceiveTransfer='4146057526'})
+11:25:32.521  INFO [http-nio-8090-exec-9] b.c.d.usecases.AccountUseCase:45 - Called AccountUseCase method getAccount(414.***.***-**)
+11:25:32.526  INFO [http-nio-8090-exec-9] b.c.d.usecases.AccountUseCase:45 - Called AccountUseCase method getAccount(414.***.***-**)
+11:25:32.532 ERROR [http-nio-8090-exec-9] o.a.c.c.C.[.[.[.[dispatcherServlet]:175 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at java.math.BigDecimal.subtract(BigDecimal.java:1438)
+	at br.com.donuscodechallenge.usecases.AccountUseCase.doTransfer(AccountUseCase.java:106)
+	at br.com.donuscodechallenge.controllers.AccountController.transfer(AccountController.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+11:28:02.420  INFO [main] b.c.d.DonusChallengeApplication:55 - Starting DonusChallengeApplication on msilvadev with PID 9899 (/home/msilvadev/Documents/workspace/donus-code-challenge/target/classes started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
+11:28:02.422  INFO [main] b.c.d.DonusChallengeApplication:655 - The following profiles are active: dev
+11:28:04.613  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11:28:06.069  INFO [main] b.c.d.DonusChallengeApplication:61 - Started DonusChallengeApplication in 4.371 seconds (JVM running for 4.825)
+11:28:06.100  INFO [main] b.c.d.DonusChallengeApplication:21 - DonusChallenge has completed startup
+11:28:19.416  INFO [http-nio-8090-exec-2] b.c.d.controllers.AccountController:35 - Called AccountController method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+11:28:19.418  INFO [http-nio-8090-exec-2] b.c.d.usecases.AccountUseCase:32 - Called AccountUseCase method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+11:28:29.416  INFO [http-nio-8090-exec-3] b.c.d.controllers.AccountController:35 - Called AccountController method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=200.00})
+11:28:29.419  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:32 - Called AccountUseCase method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=200.00})
+11:29:50.460  INFO [http-nio-8090-exec-6] b.c.d.controllers.AccountController:72 - Called AccountController method transfer(Transfer{cpfToReceiveTransfer='4146057526'})
+11:29:50.461  INFO [http-nio-8090-exec-6] b.c.d.usecases.AccountUseCase:98 - Called AccountUseCase method doTransfer(Transfer{cpfToReceiveTransfer='4146057526'})
+11:29:50.461  INFO [http-nio-8090-exec-6] b.c.d.usecases.AccountUseCase:45 - Called AccountUseCase method getAccount(414.***.***-**)
+11:29:50.467  INFO [http-nio-8090-exec-6] b.c.d.usecases.AccountUseCase:45 - Called AccountUseCase method getAccount(414.***.***-**)
+11:30:59.868  INFO [main] b.c.d.DonusChallengeApplication:55 - Starting DonusChallengeApplication on msilvadev with PID 10055 (/home/msilvadev/Documents/workspace/donus-code-challenge/target/classes started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
+11:30:59.869  INFO [main] b.c.d.DonusChallengeApplication:655 - The following profiles are active: dev
+11:31:02.126  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11:31:03.657  INFO [main] b.c.d.DonusChallengeApplication:61 - Started DonusChallengeApplication in 4.532 seconds (JVM running for 4.953)
+11:31:03.691  INFO [main] b.c.d.DonusChallengeApplication:21 - DonusChallenge has completed startup
+11:31:26.986  INFO [http-nio-8090-exec-3] b.c.d.controllers.AccountController:35 - Called AccountController method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+11:31:26.987  INFO [http-nio-8090-exec-3] b.c.d.usecases.AccountUseCase:32 - Called AccountUseCase method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+11:31:35.580  INFO [http-nio-8090-exec-2] b.c.d.controllers.AccountController:35 - Called AccountController method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+11:31:35.582  INFO [http-nio-8090-exec-2] b.c.d.usecases.AccountUseCase:32 - Called AccountUseCase method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+11:31:38.794  INFO [http-nio-8090-exec-4] b.c.d.controllers.AccountController:72 - Called AccountController method transfer(Transfer{cpfToReceiveTransfer='4146057526'})
+11:31:38.795  INFO [http-nio-8090-exec-4] b.c.d.usecases.AccountUseCase:98 - Called AccountUseCase method doTransfer(Transfer{cpfToReceiveTransfer='4146057526'})
+11:31:38.795  INFO [http-nio-8090-exec-4] b.c.d.usecases.AccountUseCase:45 - Called AccountUseCase method getAccount(414.***.***-**)
+11:31:38.800  INFO [http-nio-8090-exec-4] b.c.d.usecases.AccountUseCase:45 - Called AccountUseCase method getAccount(414.***.***-**)
+11:32:11.708  INFO [http-nio-8090-exec-7] b.c.d.controllers.AccountController:72 - Called AccountController method transfer(Transfer{cpfToReceiveTransfer='4146057526'})
+11:32:11.709  INFO [http-nio-8090-exec-7] b.c.d.usecases.AccountUseCase:98 - Called AccountUseCase method doTransfer(Transfer{cpfToReceiveTransfer='4146057526'})
+11:32:11.709  INFO [http-nio-8090-exec-7] b.c.d.usecases.AccountUseCase:45 - Called AccountUseCase method getAccount(414.***.***-**)
+11:32:11.711  INFO [http-nio-8090-exec-7] b.c.d.usecases.AccountUseCase:45 - Called AccountUseCase method getAccount(414.***.***-**)

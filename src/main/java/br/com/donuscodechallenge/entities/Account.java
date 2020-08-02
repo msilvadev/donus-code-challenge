@@ -57,6 +57,11 @@ public class Account implements Serializable {
         this.setAccountBalance(newBalance.add(this.accountBalance));
     }
 
+    public synchronized void doDraft(BigDecimal valueToDraft) {
+        BigDecimal draftWithDiscount = valueToDraft.add(valueToDraft.multiply(UtilsToEntities.DISCOUNT_PERCENTE).divide(UtilsToEntities.ONE_HUNDRED));
+        this.setAccountBalance(this.accountBalance.subtract(draftWithDiscount));
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

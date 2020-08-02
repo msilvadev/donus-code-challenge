@@ -37,6 +37,22 @@ public class UseCaseExceptionHandler extends ResponseEntityExceptionHandler {
         return handleExceptionInternal(ex, errors, new HttpHeaders(), HttpStatus.BAD_REQUEST, request);
     }
 
+    @ExceptionHandler({ BalanceCouldNotBeNegative.class })
+    public ResponseEntity<Object> handleBalanceCouldNotBeNegative(BalanceCouldNotBeNegative ex, WebRequest request){
+        String mensagemToUser = messageSource.getMessage("balance.could.not.be.negative", null, LocaleContextHolder.getLocale());
+        String messageToDev = ExceptionUtils.getRootCauseMessage(ex);
+        List<Error> errors = Arrays.asList(new Error(mensagemToUser, messageToDev));
+        return handleExceptionInternal(ex, errors, new HttpHeaders(), HttpStatus.BAD_REQUEST, request);
+    }
+
+    @ExceptionHandler({ TransactionValueNotInformed.class })
+    public ResponseEntity<Object> handleTransactionValueNotInformed(TransactionValueNotInformed ex, WebRequest request){
+        String mensagemToUser = messageSource.getMessage("transaction.value.not.informed", null, LocaleContextHolder.getLocale());
+        String messageToDev = ExceptionUtils.getRootCauseMessage(ex);
+        List<Error> errors = Arrays.asList(new Error(mensagemToUser, messageToDev));
+        return handleExceptionInternal(ex, errors, new HttpHeaders(), HttpStatus.BAD_REQUEST, request);
+    }
+
 //    private List<Error> createErrorList(BindingResult bindingResult) {
 //        List<Error> errors = new ArrayList<>();
 //

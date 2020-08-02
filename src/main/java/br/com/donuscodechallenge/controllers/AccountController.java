@@ -2,7 +2,8 @@ package br.com.donuscodechallenge.controllers;
 
 import br.com.donuscodechallenge.entities.Account;
 import br.com.donuscodechallenge.event.CreatedResourceEvent;
-import br.com.donuscodechallenge.model.Deposit;
+import br.com.donuscodechallenge.model.Transaction;
+import br.com.donuscodechallenge.model.Transfer;
 import br.com.donuscodechallenge.usecases.AccountUseCase;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,7 +20,7 @@ import java.text.NumberFormat;
 import java.util.Objects;
 
 @RestController
-@RequestMapping("/account")
+@RequestMapping("${api.version}/account")
 public class AccountController {
     private static final Logger LOGGER = LoggerFactory.getLogger(AccountController.class);
 
@@ -51,11 +52,25 @@ public class AccountController {
         return useCase.getAllAccount();
     }
 
-    @PutMapping("/deposit")
-    public ResponseEntity doDeposit(@Valid @RequestBody Deposit deposit, HttpServletResponse response){
-        LOGGER.info("Called AccountController method doDeposit({})", deposit.toString());
-        String cpfLocation = useCase.doDeposit(deposit);
+    @PutMapping
+    public ResponseEntity deposit(@Valid @RequestBody Transaction transaction, HttpServletResponse response){
+        LOGGER.info("Called AccountController method deposit({})", transaction.toString());
+        String cpfLocation = useCase.doDeposit(transaction);
         publisher.publishEvent(new CreatedResourceEvent(this, response, cpfLocation));
+        return ResponseEntity.ok().build();
+    }
+
+    @PutMapping("/draft")
+    public ResponseEntity draft(@Valid @RequestBody Transaction transaction, HttpServletResponse response){
+        LOGGER.info("Called AccountController method draft({})", transaction.toString());
+        useCase.doDraft(transaction);
+        return ResponseEntity.ok().build();
+    }
+
+    @PutMapping("/transfer")
+    public ResponseEntity transfer(@Valid @RequestBody Transfer transfer, HttpServletResponse response){
+        LOGGER.info("Called AccountController method transfer({})", transfer.toString());
+        useCase.doTransfer(transfer);
         return ResponseEntity.ok().build();
     }
 
