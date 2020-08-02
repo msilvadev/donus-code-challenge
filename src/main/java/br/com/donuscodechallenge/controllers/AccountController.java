@@ -10,17 +10,16 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
-import java.math.BigDecimal;
-import java.text.NumberFormat;
 import java.util.Objects;
 
 @RestController
-@RequestMapping("${api.version}/account")
+@RequestMapping(value = "${api.version}/account", produces = MediaType.APPLICATION_JSON_VALUE)
 public class AccountController {
     private static final Logger LOGGER = LoggerFactory.getLogger(AccountController.class);
 
@@ -72,16 +71,5 @@ public class AccountController {
         LOGGER.info("Called AccountController method transfer({})", transfer.toString());
         useCase.doTransfer(transfer);
         return ResponseEntity.ok().build();
-    }
-
-    @GetMapping("/test")
-    public String test(){
-        BigDecimal ONE_HUNDRED = new BigDecimal(100);
-        BigDecimal balance = new BigDecimal("200.00");
-        BigDecimal valueToDeposit = new BigDecimal("100.00");
-        BigDecimal pct = new BigDecimal("00.5");
-
-        NumberFormat nf = NumberFormat.getCurrencyInstance();
-        return nf.format(balance.add(valueToDeposit.multiply(pct).divide(ONE_HUNDRED)));
     }
 }

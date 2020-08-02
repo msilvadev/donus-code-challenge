@@ -107,8 +107,8 @@ public class AccountUseCase implements BankOperations{
         Account accountFrom = getAccount(transfer.getCpf()).orElse(null);
         Account accountToReceive = getAccount(transfer.getCpfToReceiveTransfer()).orElse(null);
 
-        BigDecimal previousAccountBalanceAccountTo = accountToReceive.getAccountBalance();
-        BigDecimal previousAccountBalanceAccountFrom = accountFrom.getAccountBalance();
+        BigDecimal previousAccountBalanceAccountTo = accountToReceive != null ? accountToReceive.getAccountBalance() : new BigDecimal("0.00");
+        BigDecimal previousAccountBalanceAccountFrom = accountFrom != null ? accountFrom.getAccountBalance() : new BigDecimal("0.00");
 
         if(Objects.nonNull(accountFrom) || Objects.nonNull(accountToReceive)) {
             if (accountFrom != null) {
@@ -130,10 +130,9 @@ public class AccountUseCase implements BankOperations{
                         previousAccountBalanceAccountFrom);
             }
         } else {
-            LOGGER.error("AccountNotExistException: {}", accountFrom.getCpf().substring(0, 3));
-            LOGGER.error("AccountNotExistException: {}", accountToReceive.getCpf().substring(0, 3));
+            LOGGER.error("AccountNotExistException: {}", accountFrom != null ? accountFrom.getCpf().substring(0, 3) : "");
+            LOGGER.error("AccountNotExistException: {}", accountToReceive != null ? accountToReceive.getCpf().substring(0, 3) : "");
             throw new AccountNotExistException();
         }
     }
-
 }

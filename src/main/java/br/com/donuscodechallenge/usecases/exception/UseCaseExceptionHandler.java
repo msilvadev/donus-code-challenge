@@ -23,61 +23,50 @@ public class UseCaseExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler({ AccountAlreadyExistException.class })
     public ResponseEntity<Object> handleAccountAlreadyExistException(AccountAlreadyExistException ex, WebRequest request){
-        String mensagemToUser = messageSource.getMessage("account.already.exist", null, LocaleContextHolder.getLocale());
-        String messageToDev = ExceptionUtils.getRootCauseMessage(ex);
-        List<Error> errors = Arrays.asList(new Error(mensagemToUser, messageToDev));
+        String messageUser = messageSource.getMessage("account.already.exist", null, LocaleContextHolder.getLocale());
+        String messageDev = ExceptionUtils.getRootCauseMessage(ex);
+        List<Error> errors = Arrays.asList(new Error(messageUser, messageDev));
         return handleExceptionInternal(ex, errors, new HttpHeaders(), HttpStatus.BAD_REQUEST, request);
     }
 
     @ExceptionHandler({ AccountNotExistException.class })
     public ResponseEntity<Object> handleAccountNotExistException(AccountNotExistException ex, WebRequest request){
-        String mensagemToUser = messageSource.getMessage("account.not.exist", null, LocaleContextHolder.getLocale());
-        String messageToDev = ExceptionUtils.getRootCauseMessage(ex);
-        List<Error> errors = Arrays.asList(new Error(mensagemToUser, messageToDev));
+        String messageUser = messageSource.getMessage("account.not.exist", null, LocaleContextHolder.getLocale());
+        String messageDev = ExceptionUtils.getRootCauseMessage(ex);
+        List<Error> errors = Arrays.asList(new Error(messageUser, messageDev));
         return handleExceptionInternal(ex, errors, new HttpHeaders(), HttpStatus.BAD_REQUEST, request);
     }
 
     @ExceptionHandler({ BalanceCouldNotBeNegative.class })
     public ResponseEntity<Object> handleBalanceCouldNotBeNegative(BalanceCouldNotBeNegative ex, WebRequest request){
-        String mensagemToUser = messageSource.getMessage("balance.could.not.be.negative", null, LocaleContextHolder.getLocale());
-        String messageToDev = ExceptionUtils.getRootCauseMessage(ex);
-        List<Error> errors = Arrays.asList(new Error(mensagemToUser, messageToDev));
+        String messageUser = messageSource.getMessage("balance.could.not.be.negative", null, LocaleContextHolder.getLocale());
+        String messageDev = ExceptionUtils.getRootCauseMessage(ex);
+        List<Error> errors = Arrays.asList(new Error(messageUser, messageDev));
         return handleExceptionInternal(ex, errors, new HttpHeaders(), HttpStatus.BAD_REQUEST, request);
     }
 
     @ExceptionHandler({ TransactionValueNotInformed.class })
     public ResponseEntity<Object> handleTransactionValueNotInformed(TransactionValueNotInformed ex, WebRequest request){
-        String mensagemToUser = messageSource.getMessage("transaction.value.not.informed", null, LocaleContextHolder.getLocale());
+        String messageUser = messageSource.getMessage("transaction.value.not.informed", null, LocaleContextHolder.getLocale());
         String messageToDev = ExceptionUtils.getRootCauseMessage(ex);
-        List<Error> errors = Arrays.asList(new Error(mensagemToUser, messageToDev));
+        List<Error> errors = Arrays.asList(new Error(messageUser, messageToDev));
         return handleExceptionInternal(ex, errors, new HttpHeaders(), HttpStatus.BAD_REQUEST, request);
     }
 
-//    private List<Error> createErrorList(BindingResult bindingResult) {
-//        List<Error> errors = new ArrayList<>();
-//
-//        for(FieldError fieldError : bindingResult.getFieldErrors()) {
-//            String messageToUser = messageSource.getMessage(fieldError, LocaleContextHolder.getLocale());
-//            String messageToDev = fieldError.toString();
-//            errors.add(new Error(messageToUser, messageToDev));
-//        }
-//        return errors;
-//    }
-
     public static class Error {
 
-        private String messageToUser;
-        private String messageToDev;
+        private String messageUser;
+        private String messageDev;
 
-        public Error(String messageToUser, String messageToDev) {
-            this.messageToUser = messageToUser;
-            this.messageToDev = messageToDev;
+        public Error(String messageUser, String messageDev) {
+            this.messageUser = messageUser;
+            this.messageDev = messageDev;
         }
-        public String getMessageToUser() {
-            return messageToUser;
+        public String getMessageUser() {
+            return messageUser;
         }
-        public String getMessageToDev() {
-            return messageToDev;
+        public String getMessageDev() {
+            return messageDev;
         }
     }
 }
