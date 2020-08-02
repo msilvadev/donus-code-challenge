@@ -647,3 +647,60 @@
 16:04:09.530  WARN [SpringContextShutdownHook] o.h.e.jdbc.spi.SqlExceptionHelper:137 - SQL Error: 90121, SQLState: 90121
 16:04:09.530 ERROR [SpringContextShutdownHook] o.h.e.jdbc.spi.SqlExceptionHelper:142 - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
 16:04:09.531  WARN [SpringContextShutdownHook] o.s.b.f.s.DisposableBeanAdapter:267 - Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
+16:23:32.171  INFO [main] b.c.d.usecases.AccountUseCaseTest:55 - Starting AccountUseCaseTest on msilvadev with PID 23607 (started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
+16:23:32.173  INFO [main] b.c.d.usecases.AccountUseCaseTest:655 - The following profiles are active: dev
+16:23:34.234  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:23:35.905  INFO [main] b.c.d.usecases.AccountUseCaseTest:61 - Started AccountUseCaseTest in 4.156 seconds (JVM running for 5.422)
+16:23:35.990  INFO [main] b.c.d.usecases.AccountUseCase:36 - Called AccountUseCase method createAccount(Account{cpf='928.***.***-**', clientName='Name', accountBalance=300.00})
+16:23:36.058  INFO [main] b.c.d.usecases.AccountUseCase:36 - Called AccountUseCase method createAccount(Account{cpf='928.***.***-**', clientName='Name', accountBalance=100.00})
+16:23:36.061  INFO [main] b.c.d.usecases.AccountUseCase:105 - Called AccountUseCase method doTransfer(Transfer{cpfToReceiveTransfer='92866123026'})
+16:23:36.061  INFO [main] b.c.d.usecases.AccountUseCase:49 - Called AccountUseCase method getAccount(928.***.***-**)
+16:23:36.066  INFO [main] b.c.d.usecases.AccountUseCase:49 - Called AccountUseCase method getAccount(928.***.***-**)
+16:23:36.094  INFO [main] b.c.d.usecases.AccountUseCase:49 - Called AccountUseCase method getAccount(928.***.***-**)
+16:23:36.096  INFO [main] b.c.d.usecases.AccountUseCase:49 - Called AccountUseCase method getAccount(928.***.***-**)
+16:23:36.105  INFO [main] b.c.d.usecases.AccountUseCase:36 - Called AccountUseCase method createAccount(Account{cpf='888.***.***-**', clientName='Name', accountBalance=100.00})
+16:23:36.111  INFO [main] b.c.d.usecases.AccountUseCase:80 - Called AccountUseCase method doDraft(Deposit{cpf='88888899934', transactionValue=200.00, transactionType=DRAFT})
+16:23:36.112  INFO [main] b.c.d.usecases.AccountUseCase:49 - Called AccountUseCase method getAccount(888.***.***-**)
+16:23:36.120  INFO [main] b.c.d.usecases.AccountUseCase:36 - Called AccountUseCase method createAccount(Account{cpf='762.***.***-**', clientName='Name', accountBalance=200.00})
+16:23:36.124  INFO [main] b.c.d.usecases.AccountUseCase:36 - Called AccountUseCase method createAccount(Account{cpf='762.***.***-**', clientName='Name', accountBalance=200.00})
+16:23:36.125 ERROR [main] b.c.d.usecases.AccountUseCase:41 - AccountAlreadyExistException because this account(76268969049) already exist
+16:23:36.129  INFO [main] b.c.d.usecases.AccountUseCase:36 - Called AccountUseCase method createAccount(Account{cpf='928.***.***-**', clientName='Name', accountBalance=300.00})
+16:23:36.133  INFO [main] b.c.d.usecases.AccountUseCase:36 - Called AccountUseCase method createAccount(Account{cpf='928.***.***-**', clientName='Name', accountBalance=100.00})
+16:23:36.137  INFO [main] b.c.d.usecases.AccountUseCase:105 - Called AccountUseCase method doTransfer(Transfer{cpfToReceiveTransfer='92866123021'})
+16:23:36.137  INFO [main] b.c.d.usecases.AccountUseCase:49 - Called AccountUseCase method getAccount(928.***.***-**)
+16:23:36.139  INFO [main] b.c.d.usecases.AccountUseCase:49 - Called AccountUseCase method getAccount(928.***.***-**)
+16:23:36.147  INFO [main] b.c.d.usecases.AccountUseCase:60 - Called AccountUseCase method createAccount(Deposit{cpf='15509374055', transactionValue=100.00, transactionType=DEPOSIT})
+16:23:36.148  INFO [main] b.c.d.usecases.AccountUseCase:49 - Called AccountUseCase method getAccount(155.***.***-**)
+16:23:36.149 ERROR [main] b.c.d.usecases.AccountUseCase:71 - AccountNotExistException: 155
+16:23:36.154  INFO [main] b.c.d.usecases.AccountUseCase:36 - Called AccountUseCase method createAccount(Account{cpf='928.***.***-**', clientName='Name', accountBalance=200.00})
+16:23:36.158  INFO [main] b.c.d.usecases.AccountUseCase:80 - Called AccountUseCase method doDraft(Deposit{cpf='92866123034', transactionValue=100.00, transactionType=DRAFT})
+16:23:36.158  INFO [main] b.c.d.usecases.AccountUseCase:49 - Called AccountUseCase method getAccount(928.***.***-**)
+16:23:36.163  INFO [main] b.c.d.usecases.AccountUseCase:49 - Called AccountUseCase method getAccount(928.***.***-**)
+16:23:36.172  INFO [main] b.c.d.usecases.AccountUseCase:36 - Called AccountUseCase method createAccount(Account{cpf='155.***.***-**', clientName='Name', accountBalance=100.00})
+16:23:36.175  INFO [main] b.c.d.usecases.AccountUseCase:60 - Called AccountUseCase method createAccount(Deposit{cpf='15509374055', transactionValue=100.00, transactionType=DEPOSIT})
+16:23:36.175  INFO [main] b.c.d.usecases.AccountUseCase:49 - Called AccountUseCase method getAccount(155.***.***-**)
+16:23:36.182  INFO [main] b.c.d.usecases.AccountUseCase:49 - Called AccountUseCase method getAccount(155.***.***-**)
+16:23:36.189  INFO [main] b.c.d.usecases.AccountUseCase:80 - Called AccountUseCase method doDraft(Deposit{cpf='88888899939', transactionValue=1.00, transactionType=DRAFT})
+16:23:36.189  INFO [main] b.c.d.usecases.AccountUseCase:49 - Called AccountUseCase method getAccount(888.***.***-**)
+16:23:36.190 ERROR [main] b.c.d.usecases.AccountUseCase:96 - AccountNotExistException: 888
+16:23:36.194  INFO [main] b.c.d.usecases.AccountUseCase:36 - Called AccountUseCase method createAccount(Account{cpf='393.***.***-**', clientName='Name', accountBalance=200.00})
+16:23:36.197  INFO [main] b.c.d.usecases.AccountUseCase:49 - Called AccountUseCase method getAccount(393.***.***-**)
+16:23:36.202  INFO [main] b.c.d.usecases.AccountUseCase:49 - Called AccountUseCase method getAccount(456.***.***-**)
+16:23:36.207  INFO [main] b.c.d.usecases.AccountUseCase:36 - Called AccountUseCase method createAccount(Account{cpf='318.***.***-**', clientName='Name', accountBalance=200.00})
+16:23:36.210  INFO [main] b.c.d.usecases.AccountUseCase:54 - Called AccountUseCase method getAccount()
+16:23:36.336  INFO [main] b.c.d.usecases.AccountUseCase:105 - Called AccountUseCase method doTransfer(Transfer{cpfToReceiveTransfer='92866123026'})
+16:23:36.336  INFO [main] b.c.d.usecases.AccountUseCase:49 - Called AccountUseCase method getAccount(928.***.***-**)
+16:23:36.337  INFO [main] b.c.d.usecases.AccountUseCase:49 - Called AccountUseCase method getAccount(928.***.***-**)
+16:23:36.342  INFO [main] b.c.d.usecases.AccountUseCase:36 - Called AccountUseCase method createAccount(Account{cpf='888.***.***-**', clientName='Name', accountBalance=200.00})
+16:23:36.373  WARN [SpringContextShutdownHook] o.h.e.jdbc.spi.SqlExceptionHelper:137 - SQL Error: 90121, SQLState: 90121
+16:23:36.373 ERROR [SpringContextShutdownHook] o.h.e.jdbc.spi.SqlExceptionHelper:142 - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+16:23:36.374  WARN [SpringContextShutdownHook] o.h.e.jdbc.spi.SqlExceptionHelper:137 - SQL Error: 90121, SQLState: 90121
+16:23:36.374 ERROR [SpringContextShutdownHook] o.h.e.jdbc.spi.SqlExceptionHelper:142 - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+16:23:36.375  WARN [SpringContextShutdownHook] o.s.b.f.s.DisposableBeanAdapter:267 - Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
+16:40:01.575  INFO [main] b.c.d.DonusChallengeApplication:55 - Starting DonusChallengeApplication v0.0.1-SNAPSHOT on msilvadev with PID 24031 (/home/msilvadev/Documents/workspace/donus-code-challenge/target/donus-code-challenge-0.0.1-SNAPSHOT.jar started by msilvadev in /home/msilvadev/Documents/workspace/donus-code-challenge)
+16:40:01.576  INFO [main] b.c.d.DonusChallengeApplication:655 - The following profiles are active: dev
+16:40:04.261  WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:40:06.898  INFO [main] b.c.d.DonusChallengeApplication:61 - Started DonusChallengeApplication in 6.12 seconds (JVM running for 6.615)
+16:40:06.931  INFO [main] b.c.d.DonusChallengeApplication:21 - DonusChallenge has completed startup
+16:40:13.258  INFO [http-nio-8090-exec-2] b.c.d.controllers.AccountController:34 - Called AccountController method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})
+16:40:13.260  INFO [http-nio-8090-exec-2] b.c.d.usecases.AccountUseCase:36 - Called AccountUseCase method createAccount(Account{cpf='414.***.***-**', clientName='Test', accountBalance=100.00})

@@ -6,7 +6,6 @@ spring:
     name: donus-code-challange
   profiles:
     active: dev
-  # http://localhost:8090/h2-console -> database portal
   h2:
     console:
       enabled: true
