@@ -5,6 +5,7 @@ import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 @Entity
@@ -13,20 +14,20 @@ public class AccountHistoric implements Serializable {
     private static final long serialVersionUID = 7847539592781914308L;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Enumerated(EnumType.STRING)
     private TransactionType transactionType;
 
     @NotNull
-    private LocalDate transactionDate;
+    private LocalDateTime transactionDate;
 
     @NotNull
     private BigDecimal previousAccountBalance;
 
     private String observation;
 
-    //uma categoria pode estar em varios lancamentos
     @NotNull
     @ManyToOne
     @JoinColumn(name = "account")
@@ -35,13 +36,18 @@ public class AccountHistoric implements Serializable {
     public AccountHistoric() {
     }
 
-    public AccountHistoric(Long id, TransactionType transactionType, @NotNull LocalDate transactionDate, @NotNull BigDecimal previousAccountBalance, String observation, @NotNull Account account) {
+    public AccountHistoric(Long id, TransactionType transactionType, @NotNull LocalDateTime transactionDate, @NotNull BigDecimal previousAccountBalance, String observation, @NotNull Account account) {
         this.id = id;
         this.transactionType = transactionType;
         this.transactionDate = transactionDate;
         this.previousAccountBalance = previousAccountBalance;
         this.observation = observation;
         this.account = account;
+    }
+
+    @PrePersist
+    private void saveTransactionDate(){
+        this.transactionDate = LocalDateTime.now();
     }
 
     public Long getId() {
@@ -60,11 +66,11 @@ public class AccountHistoric implements Serializable {
         this.transactionType = transactionType;
     }
 
-    public LocalDate getTransactionDate() {
+    public LocalDateTime getTransactionDate() {
         return transactionDate;
     }
 
-    public void setTransactionDate(LocalDate transactionDate) {
+    public void setTransactionDate(LocalDateTime transactionDate) {
         this.transactionDate = transactionDate;
     }
 

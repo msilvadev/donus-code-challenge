@@ -23,9 +23,13 @@ public class AccountUseCase implements BankOperations{
 
     private final AccountRepository repository;
 
+    private final AccountHistoricUseCase accountHistoricUseCase;
+
     @Autowired
-    public AccountUseCase(AccountRepository repository) {
+    public AccountUseCase(AccountRepository repository,
+                          AccountHistoricUseCase accountHistoricUseCase) {
         this.repository = repository;
+        this.accountHistoricUseCase = accountHistoricUseCase;
     }
 
     public Account createAccount(Account account) {
@@ -57,10 +61,12 @@ public class AccountUseCase implements BankOperations{
 
         Account account = getAccount(transaction.getCpf()).orElse(null);
         if(Objects.nonNull(account)) {
+            BigDecimal previousAccountBalance = account.getAccountBalance();
+
             account.doDeposit(transaction.getTransactionValue());
             repository.save(account);
 
-            //TODO: PROCESSO DE SALVAR HISTÓRICO
+            accountHistoricUseCase.saveHistoric(account, transaction, previousAccountBalance);
         } else {
             LOGGER.error("AccountNotExistException: {}", transaction.getCpf().substring(0, 3));
             throw new AccountNotExistException();
@@ -76,15 +82,16 @@ public class AccountUseCase implements BankOperations{
         Account account = getAccount(transaction.getCpf()).orElse(null);
 
         if(Objects.nonNull(account)) {
-            account.doDraft(transaction.getTransactionValue());
+            BigDecimal previousAccountBalance = account.getAccountBalance();
 
+            account.doDraft(transaction.getTransactionValue());
             if(account.getAccountBalance().compareTo(BigDecimal.ZERO) < 0 ){
                 throw new BalanceCouldNotBeNegative();
             } else{
                 repository.save(account);
-            }
 
-            //TODO: PROCESSO DE SALVAR HISTÓRICO
+                accountHistoricUseCase.saveHistoric(account, transaction, previousAccountBalance);
+            }
         } else {
             LOGGER.error("AccountNotExistException: {}", transaction.getCpf().substring(0, 3));
             throw new AccountNotExistException();
@@ -100,6 +107,9 @@ public class AccountUseCase implements BankOperations{
         Account accountFrom = getAccount(transfer.getCpf()).orElse(null);
         Account accountToReceive = getAccount(transfer.getCpfToReceiveTransfer()).orElse(null);
 
+        BigDecimal previousAccountBalanceAccountTo = accountToReceive.getAccountBalance();
+        BigDecimal previousAccountBalanceAccountFrom = accountFrom.getAccountBalance();
+
         if(Objects.nonNull(accountFrom) || Objects.nonNull(accountToReceive)) {
             if (accountFrom != null) {
                 accountFrom.setAccountBalance(accountFrom.getAccountBalance()
@@ -110,12 +120,15 @@ public class AccountUseCase implements BankOperations{
                 throw new BalanceCouldNotBeNegative();
             } else{
                 repository.save(accountFrom);
-                assert accountToReceive != null;
                 accountToReceive.setAccountBalance(accountToReceive.getAccountBalance().add(transfer.getTransactionValue()));
                 repository.save(accountToReceive);
-            }
 
-            //TODO: PROCESSO DE SALVAR HISTÓRICO
+                accountHistoricUseCase.saveHistoric(accountToReceive,
+                        accountFrom,
+                        transfer,
+                        previousAccountBalanceAccountTo,
+                        previousAccountBalanceAccountFrom);
+            }
         } else {
             LOGGER.error("AccountNotExistException: {}", accountFrom.getCpf().substring(0, 3));
             LOGGER.error("AccountNotExistException: {}", accountToReceive.getCpf().substring(0, 3));
