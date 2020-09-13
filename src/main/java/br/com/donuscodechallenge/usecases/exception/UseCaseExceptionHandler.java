@@ -31,7 +31,10 @@ public class UseCaseExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler({ AccountNotExistException.class })
     public ResponseEntity<Object> handleAccountNotExistException(AccountNotExistException ex, WebRequest request){
-        String messageUser = messageSource.getMessage("account.not.exist", null, LocaleContextHolder.getLocale());
+        Object[] cpfWhichNotExist = new Object[]{
+                ex.getMessage()
+        };
+        String messageUser = messageSource.getMessage("account.not.exist", cpfWhichNotExist, LocaleContextHolder.getLocale());
         String messageDev = ExceptionUtils.getRootCauseMessage(ex);
         List<Error> errors = Arrays.asList(new Error(messageUser, messageDev));
         return handleExceptionInternal(ex, errors, new HttpHeaders(), HttpStatus.BAD_REQUEST, request);

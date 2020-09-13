@@ -20,7 +20,8 @@ public class Account implements Serializable {
     private String clientName;
     private BigDecimal accountBalance;
 
-    public Account() {}
+    public Account() {
+    }
 
     public Account(String cpf, String clientName, BigDecimal accountBalance) {
         this.cpf = cpf;
@@ -53,12 +54,14 @@ public class Account implements Serializable {
     }
 
     public synchronized void doDeposit(BigDecimal valueToDeposit) {
-        BigDecimal newBalance = accountBalance.add(valueToDeposit.multiply(UtilsToEntities.BONUS_PERCENTE).divide(UtilsToEntities.ONE_HUNDRED));
+        BigDecimal newBalance = accountBalance
+                .add(valueToDeposit.multiply(UtilsToEntities.BONUS_PERCENTE).divide(UtilsToEntities.ONE_HUNDRED));
         this.setAccountBalance(newBalance.add(this.accountBalance));
     }
 
     public synchronized void doDraft(BigDecimal valueToDraft) {
-        BigDecimal draftWithDiscount = valueToDraft.add(valueToDraft.multiply(UtilsToEntities.DISCOUNT_PERCENTE).divide(UtilsToEntities.ONE_HUNDRED));
+        BigDecimal draftWithDiscount = valueToDraft
+                .add(valueToDraft.multiply(UtilsToEntities.DISCOUNT_PERCENTE).divide(UtilsToEntities.ONE_HUNDRED));
         this.setAccountBalance(this.accountBalance.subtract(draftWithDiscount));
     }
 

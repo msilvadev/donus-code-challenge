@@ -71,14 +71,14 @@ public class AccountUseCaseTest {
         account = new Account("39330997066", "Name", new BigDecimal("200.00"));
         useCase.createAccount(account);
 
-        Account accountFound = useCase.getAccount("39330997066").orElse(null);
+        Account accountFound = useCase.getAccount("39330997066");
 
         assertThat(accountFound).isEqualTo(account);
     }
 
     @Test
     public void notFoundAccountTest(){
-        Account accountFound = useCase.getAccount("45640020075").orElse(null);
+        Account accountFound = useCase.getAccount("45640020075");
         assertThat(accountFound).isNull();
     }
 
@@ -100,7 +100,7 @@ public class AccountUseCaseTest {
 
         useCase.doDeposit(transaction);
 
-        Account accountFound = useCase.getAccount("15509374055").orElse(null);
+        Account accountFound = useCase.getAccount("15509374055");
 
         assertThat(accountFound.getCpf()).isEqualTo(account.getCpf());
         assertThat(accountFound.getAccountBalance()).isEqualTo(new BigDecimal("200.50"));
@@ -124,7 +124,7 @@ public class AccountUseCaseTest {
 
         useCase.doDraft(transaction);
 
-        Account accountFound = useCase.getAccount("92866123034").orElse(null);
+        Account accountFound = useCase.getAccount("92866123034");
 
         assertThat(accountFound.getCpf()).isEqualTo(account.getCpf());
         assertThat(accountFound.getAccountBalance()).isEqualTo(new BigDecimal("99.00"));
@@ -163,8 +163,8 @@ public class AccountUseCaseTest {
 
         useCase.doTransfer(transfer);
 
-        Account accountFoundTo = useCase.getAccount("92866123025").orElse(null);
-        Account accountFoundFrom = useCase.getAccount("92866123026").orElse(null);
+        Account accountFoundTo = useCase.getAccount("92866123025");
+        Account accountFoundFrom = useCase.getAccount("92866123026");
 
         assertThat(accountFoundTo.getAccountBalance()).isEqualTo(new BigDecimal("200.00"));
         assertThat(accountFoundFrom.getAccountBalance()).isEqualTo(new BigDecimal("200.00"));

@@ -19,6 +19,7 @@ public class DonusChallengeApplication {
 					.sources(DonusChallengeApplication.class)
 					.run(args);
 			LOGGER.info("DonusChallenge has completed startup");
+			System.gc();
 		} catch (Exception e) {
 			LOGGER.error("Exception when starting DonusChallenge", e);
 			System.exit(1);

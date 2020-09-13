@@ -20,6 +20,8 @@ public class Transaction {
         this.transactionType = transactionType;
     }
 
+    public Transaction(){}
+
     public String getCpf() {
         return cpf;
     }

@@ -9,3 +9,6 @@ está na pasta `Collection Postman`.
 
 Na pasta `target` está o jar da aplicação, caso queriam rodar pela linha de comando:
 `java -jar -Xms512m -Xmx512m [***PATH ONDE FOI CLONADO O PROJETO***]/target/donus-code-challenge-0.0.1-SNAPSHOT.jar --spring.config.location=file:'[***PATH ONDE FOI CLONADO O PROJETO***]/src/main/resources/application.yml' &`
+
+Parâmetros adicionais para o GC, para evitar efeitos 'colaterais', do FullGC após a inicialização da aplicação:
+`-Xms512m -Xmx512m -XX:+ExplicitGCInvokesConcurrentAndUnloadsClasses -XX:+UseConcMarkSweepGC` 

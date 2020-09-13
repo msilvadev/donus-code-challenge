@@ -5,6 +5,7 @@ import br.com.donuscodechallenge.event.CreatedResourceEvent;
 import br.com.donuscodechallenge.model.Transaction;
 import br.com.donuscodechallenge.model.Transfer;
 import br.com.donuscodechallenge.usecases.AccountUseCase;
+import br.com.donuscodechallenge.usecases.exception.AccountNotExistException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
-import java.util.Objects;
+import java.util.NoSuchElementException;
 
 @RestController
 @RequestMapping(value = "${api.version}/account", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -41,8 +42,12 @@ public class AccountController {
     @GetMapping("/{cpf}")
     public ResponseEntity<Account> getAccount(@PathVariable String cpf) {
         LOGGER.info("Called AccountController method getAccount({})", cpf != null ? cpf.substring(0, 3) + ".***.***-**" : "");
-        Account account = useCase.getAccount(cpf).orElse(null);
-        return Objects.nonNull(account) ? ResponseEntity.ok(account) : ResponseEntity.notFound().build();
+        try {
+            Account account = useCase.getAccount(cpf);
+            return ResponseEntity.ok(account);
+        } catch (NoSuchElementException ex){
+            throw new AccountNotExistException(cpf, ex.getCause());
+        }
     }
 
     @GetMapping

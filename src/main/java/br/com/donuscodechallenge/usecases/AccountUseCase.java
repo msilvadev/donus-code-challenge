@@ -13,8 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.NoSuchElementException;
 
 @Component
 public class AccountUseCase implements BankOperations{
@@ -33,7 +32,7 @@ public class AccountUseCase implements BankOperations{
     }
 
     public Account createAccount(Account account) {
-        LOGGER.info("Called AccountUseCase method createAccount({})", account.toString());
+        LOGGER.info("Called AccountUseCase method createAccount({})", account.toString() != null ? account.toString() : "");
 
         Account accountCreated = repository.findById(account.getCpf()).orElse(null);
 
@@ -45,9 +44,9 @@ public class AccountUseCase implements BankOperations{
         return repository.save(account);
     }
 
-    public Optional<Account> getAccount(String cpf) {
+    public Account getAccount(String cpf) {
         LOGGER.info("Called AccountUseCase method getAccount({})", cpf != null ? cpf.substring(0, 3) + ".***.***-**" : "");
-        return repository.findById(cpf != null ? cpf : "");
+        return repository.findById(cpf).get();
     }
 
     public Iterable<Account> getAllAccount() {
@@ -57,44 +56,34 @@ public class AccountUseCase implements BankOperations{
 
     @Override
     public String doDeposit(Transaction transaction) {
-        LOGGER.info("Called AccountUseCase method createAccount({})", transaction.toString());
+        LOGGER.info("Called AccountUseCase method createAccount({})", transaction.toString() != null
+                ? transaction.toString() : "");
 
-        Account account = getAccount(transaction.getCpf()).orElse(null);
-        if(Objects.nonNull(account)) {
-            BigDecimal previousAccountBalance = account.getAccountBalance();
+        Account account = verifyAccount(transaction.getCpf());
+        BigDecimal previousAccountBalance = account.getAccountBalance();
 
-            account.doDeposit(transaction.getTransactionValue());
-            repository.save(account);
-
-            accountHistoricUseCase.saveHistoric(account, transaction, previousAccountBalance);
-        } else {
-            LOGGER.error("AccountNotExistException: {}", transaction.getCpf().substring(0, 3));
-            throw new AccountNotExistException();
-        }
+        account.doDeposit(transaction.getTransactionValue());
+        repository.save(account);
+        accountHistoricUseCase.saveHistoric(account, transaction, previousAccountBalance);
 
         return account.getCpf();
     }
 
     @Override
     public String doDraft(Transaction transaction) {
-        LOGGER.info("Called AccountUseCase method doDraft({})", transaction.toString());
+        LOGGER.info("Called AccountUseCase method doDraft({})", transaction.toString() != null
+                ? transaction.toString() : "");
 
-        Account account = getAccount(transaction.getCpf()).orElse(null);
+        Account account = verifyAccount(transaction.getCpf());
+        BigDecimal previousAccountBalance = account.getAccountBalance();
 
-        if(Objects.nonNull(account)) {
-            BigDecimal previousAccountBalance = account.getAccountBalance();
+        account.doDraft(transaction.getTransactionValue());
 
-            account.doDraft(transaction.getTransactionValue());
-            if(account.getAccountBalance().compareTo(BigDecimal.ZERO) < 0 ){
-                throw new BalanceCouldNotBeNegative();
-            } else{
-                repository.save(account);
-
-                accountHistoricUseCase.saveHistoric(account, transaction, previousAccountBalance);
-            }
+        if (account.getAccountBalance().compareTo(BigDecimal.ZERO) < 0) {
+            throw new BalanceCouldNotBeNegative();
         } else {
-            LOGGER.error("AccountNotExistException: {}", transaction.getCpf().substring(0, 3));
-            throw new AccountNotExistException();
+            repository.save(account);
+            accountHistoricUseCase.saveHistoric(account, transaction, previousAccountBalance);
         }
 
         return account.getCpf();
@@ -102,37 +91,39 @@ public class AccountUseCase implements BankOperations{
 
     @Override
     public void doTransfer(Transfer transfer) {
-        LOGGER.info("Called AccountUseCase method doTransfer({})", transfer.toString());
+        LOGGER.info("Called AccountUseCase method doTransfer({})", transfer.toString() != null
+                ? transfer.toString() : "");
 
-        Account accountFrom = getAccount(transfer.getCpf()).orElse(null);
-        Account accountToReceive = getAccount(transfer.getCpfToReceiveTransfer()).orElse(null);
+        Account accountFrom = verifyAccount(transfer.getCpf());
+        Account accountToReceive = verifyAccount(transfer.getCpfToReceiveTransfer());
 
-        BigDecimal previousAccountBalanceAccountTo = accountToReceive != null ? accountToReceive.getAccountBalance() : new BigDecimal("0.00");
-        BigDecimal previousAccountBalanceAccountFrom = accountFrom != null ? accountFrom.getAccountBalance() : new BigDecimal("0.00");
+        BigDecimal previousAccountBalanceAccountTo = accountToReceive.getAccountBalance();
+        BigDecimal previousAccountBalanceAccountFrom = accountFrom.getAccountBalance();
 
-        if(Objects.nonNull(accountFrom) || Objects.nonNull(accountToReceive)) {
-            if (accountFrom != null) {
-                accountFrom.setAccountBalance(accountFrom.getAccountBalance()
-                        .subtract(transfer.getTransactionValue()));
-            } else throw new AccountNotExistException();
+        accountFrom.setAccountBalance(accountFrom.getAccountBalance()
+                .subtract(transfer.getTransactionValue()));
 
-            if(accountFrom.getAccountBalance().compareTo(BigDecimal.ZERO) < 0 ){
-                throw new BalanceCouldNotBeNegative();
-            } else{
-                repository.save(accountFrom);
-                accountToReceive.setAccountBalance(accountToReceive.getAccountBalance().add(transfer.getTransactionValue()));
-                repository.save(accountToReceive);
-
-                accountHistoricUseCase.saveHistoric(accountToReceive,
-                        accountFrom,
-                        transfer,
-                        previousAccountBalanceAccountTo,
-                        previousAccountBalanceAccountFrom);
-            }
+        if (accountFrom.getAccountBalance().compareTo(BigDecimal.ZERO) < 0) {
+            throw new BalanceCouldNotBeNegative();
         } else {
-            LOGGER.error("AccountNotExistException: {}", accountFrom != null ? accountFrom.getCpf().substring(0, 3) : "");
-            LOGGER.error("AccountNotExistException: {}", accountToReceive != null ? accountToReceive.getCpf().substring(0, 3) : "");
-            throw new AccountNotExistException();
+            repository.save(accountFrom);
+            accountToReceive.setAccountBalance(accountToReceive.getAccountBalance().add(transfer.getTransactionValue()));
+            repository.save(accountToReceive);
+
+            accountHistoricUseCase.saveHistoric(accountToReceive,
+                    accountFrom,
+                    transfer,
+                    previousAccountBalanceAccountTo,
+                    previousAccountBalanceAccountFrom);
+        }
+    }
+
+    private Account verifyAccount(String cpf){
+        try {
+            return getAccount(cpf);
+        }catch (NoSuchElementException ex){
+            LOGGER.error("AccountNotExistException: {}", cpf.substring(0, 3));
+            throw new AccountNotExistException(cpf, ex.getCause());
         }
     }
 }
